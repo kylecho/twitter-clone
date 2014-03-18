@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-  describe "Home page" do
+  let(:base_title) { "SNS는 모다?" }
 
-    let(:base_title) { "SNS는 모다?" }
+  describe "Home page" do
 
     it "should have the content 'SNS'" do
       visit '/static_pages/home'
