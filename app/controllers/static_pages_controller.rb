@@ -7,4 +7,7 @@ class StaticPagesController < ApplicationController # Classes are simply a conve
 
   def about
   end
+
+  def contact
+  end
 end
