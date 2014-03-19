@@ -1,3 +1,19 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>트윗 피드</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
 <div class="wall">
   <div class="container">
     <h1>트위터는 인생의 낭비다.</h1><br><br><br>
@@ -6,3 +22,4 @@
     <p><%= link_to "지금 가입하세요!", signup_path, class: "btn btn-large btn" %></p>
   </div>
 </div>
+<% end %>
